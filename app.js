@@ -1,9 +1,11 @@
+import 'dotenv/config'
+
 let mainImg = document.querySelector("img");
 let mainVid = document.querySelector("iframe");
 let btn = document.querySelector("button");
 
 btn.addEventListener("click", ()=>{
-  const key = 'u8IyZlTi7HZhLIOjxE8q8cCaXKsLonpXq8sKVY3X'
+  const key = process.env.API_KEY
   const choice = document.querySelector("input").value.toLowerCase();
   const url = `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${choice}`;
   fetch(url)
