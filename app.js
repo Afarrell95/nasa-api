@@ -2,11 +2,10 @@ let mainImg = document.querySelector("img");
 let mainVid = document.querySelector("iframe");
 let btn = document.querySelector("button");
 
-btn.addEventListener("click", () => console.log("works"));
-
-function getFetch() {
+btn.addEventListener("click", ()=>{
+  const key = 'u8IyZlTi7HZhLIOjxE8q8cCaXKsLonpXq8sKVY3X'
   const choice = document.querySelector("input").value.toLowerCase();
-  const url = `https://api.nasa.gov/planetary/apod?api_key=u8IyZlTi7HZhLIOjxE8q8cCaXKsLonpXq8sKVY3X&date=${choice}`;
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${choice}`;
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
@@ -27,4 +26,6 @@ function getFetch() {
     .catch((err) => {
       console.log(`error ${err}`);
     });
-}
+});
+
+
