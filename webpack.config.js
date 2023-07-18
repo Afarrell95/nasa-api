@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
   },
-  devtool: "sources-maps",
+  devtool: "source-map",
   module: {
     rules: [
       { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
@@ -23,20 +23,24 @@ module.exports = {
           },
         ],
       },
-      { test: /\.css$/, loader: ["style-loader", "css-loader"] },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
       {
         test: /\.s(a|c)ss$/,
-        loader: ["style-loader", "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
+      
     ],
   },
   devServer: {
     
-    contentBase: "src",
+    
     hot: true,
     open: true,
     port: 8000,
-    watchContentBase: true,
+  
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
