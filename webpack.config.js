@@ -35,9 +35,6 @@ module.exports = {
     ],
   },
   devServer: {
-    
-    
-    hot: true,
     open: true,
     port: 8000,
   
@@ -51,4 +48,14 @@ module.exports = {
     }),
     new Dotenv(),
   ],
+  resolve: {
+    fallback: {
+      fs: false, // or use require.resolve('fs') for polyfill
+      os: require.resolve('os-browserify/browser'),
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
+      buffer: require.resolve('buffer/'),
+      path: require.resolve('path-browserify')
+    }
+  }
 };
