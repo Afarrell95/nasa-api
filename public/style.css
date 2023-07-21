@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body{
-    background-image: linear-gradient(#060F23,#060F23,#5A70A3);
+    background-image: linear-gradient(#060F23,#1b305e,#5A70A3);
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
@@ -13,16 +13,17 @@
   
   header{
     background: black;
+    padding: 1em;
+    font-size: 1.5rem;
   }
   
   img{
     display: block;
     margin: auto;
     margin-bottom: 1.5em;
-    max-height: 400px;
-    max-width: 500px;
+    max-width: 80%;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
   }
   
   img:active{
@@ -35,15 +36,16 @@
   
   iframe:active{
     display: block;
-    margin: 0 auto;
-    height: 300px;
-    border-radius: 5px;
+    margin: auto;
+    max-width: 80%;
+    border-radius: 15px;
   }
   
   h2{
      display: flex;
     justify-content:center;
     padding: 40px;
+    font-size: 2rem;
   }
   
   h3{
@@ -79,9 +81,9 @@
   .explanation{
     margin:auto;
    padding: 2em;
-    max-width:800px;  
+    max-width:90%;  
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  border-radius: 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
