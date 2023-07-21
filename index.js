@@ -5,14 +5,14 @@ const port = 3000;
 const key = process.env.API_KEY;
 
 
-app.use(express.static('docs'));
+app.use(express.static('public'));
 
 app.get('/api/key', (req, res) => {
     res.send(key);
   });
   
   app.get('/app.js', (req, res) => {
-    res.sendFile(__dirname + '/docs/app.js');
+    res.sendFile(__dirname + '/public/app.js');
   });
 
 
