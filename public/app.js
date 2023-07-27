@@ -2,9 +2,9 @@ let mainImg = document.querySelector("img");
 let mainVid = document.querySelector("iframe");
 let btn = document.querySelector("button");
 
-fetch('/api/key')
-  .then(response => response.text())
-  .then(key => {
+fetch("/api/key")
+  .then((response) => response.text())
+  .then((key) => {
     // apiKey = apiKey.replace(/(\r\n|\n|\r)/gm, '');
     console.log(key);
 
@@ -12,7 +12,7 @@ fetch('/api/key')
       const choice = document.querySelector("input").value.toLowerCase();
       const url = `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${choice}`;
       fetch(url)
-        .then((res) => res.json()) 
+        .then((res) => res.json())
         .then((data) => {
           console.log(data);
           if (data.media_type === "image") {
@@ -24,7 +24,7 @@ fetch('/api/key')
           }
 
           document.querySelector(
-            "h3"
+            "p"
           ).innerText = `About this: ${data.explanation}`;
         })
         .catch((err) => {
@@ -32,4 +32,4 @@ fetch('/api/key')
         });
     });
   })
-  .catch(error => console.error('Error fetching API key:', error));
+  .catch((error) => console.error("Error fetching API key:", error));
