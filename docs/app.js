@@ -5,7 +5,6 @@ let btn = document.querySelector("button");
 fetch("/api/key")
   .then((response) => response.text())
   .then((key) => {
-    // apiKey = apiKey.replace(/(\r\n|\n|\r)/gm, '');
     console.log(key);
 
     btn.addEventListener("click", () => {

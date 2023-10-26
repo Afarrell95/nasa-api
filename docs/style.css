@@ -15,6 +15,9 @@
     background: black;
     padding: 1em;
     font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content:center;
   }
   
   img{
@@ -58,12 +61,6 @@
     border: none;
     border-radius: 0 5px 5px 0;
     background: #F5B041;
-  }
-  
-  header{
-    width: 100%;
-    display: flex;
-    justify-content:center;
   }
   
   .date-select{
