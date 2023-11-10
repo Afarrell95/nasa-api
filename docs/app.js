@@ -5,8 +5,6 @@ let btn = document.querySelector("button");
 fetch("/api/key")
   .then((response) => response.text())
   .then((key) => {
-    console.log(key);
-
     btn.addEventListener("click", () => {
       const choice = document.querySelector("input").value.toLowerCase();
       const url = `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${choice}`;
