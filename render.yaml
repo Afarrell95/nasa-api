@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: nasaApi
+    command: node index.js # Replace with your start command
+    envVars:
+      - key: NODE_ENV
+        value: production
