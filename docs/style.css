@@ -29,7 +29,7 @@
     border-radius: 15px;
   }
   
-  img:active{
+  img.active{
     display: none;
   }
   
@@ -37,13 +37,14 @@
     display: none;
   }
   
-  iframe:active{
+  iframe.active {
     display: block;
     margin: auto;
+    width: 500px;
+    height: 400px;
     max-width: 80%;
     border-radius: 15px;
   }
-  
   h2{
      display: flex;
     justify-content:center;
